@@ -11,6 +11,7 @@ project from scratch again and again!
 - [Usage](#usage)
   - [Build](#build)
   - [Lint](#lint)
+  - [Config](#config)
 - [Versioning](#versioning)
 - [References](#references)
 
@@ -53,6 +54,18 @@ Fix code style issues in the project.
 ```shell
 npm run lint:fix
 ```
+
+### Config
+
+```shell
+cp .env.example .env
+```
+
+|       Name        |               Type                |    Default    |                                               Description                                               |
+|:-----------------:|:---------------------------------:|:-------------:|:-------------------------------------------------------------------------------------------------------:|
+|    `NODE_ENV`     | `production`,`development`,`test` | `development` | [Node.js][NODE_JS_WEBSITE] environment (`test` will be provided by the testing framework automatically) |
+| `SERVER_HOSTNAME` |              string               |  `localhost`  |                            [Express.js][EXPRESS_JS_WEBSITE] server hostname                             |
+|   `SERVER_PORT`   |              number               |    `3000`     |                              [Express.js][EXPRESS_JS_WEBSITE] server port                               |
 
 ## Versioning
 
