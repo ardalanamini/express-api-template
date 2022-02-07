@@ -12,6 +12,8 @@ project from scratch again and again!
   - [Build](#build)
   - [Lint](#lint)
   - [Config](#config)
+    - [Common](#common-config)
+    - [Server](#server-config)
 - [Versioning](#versioning)
 - [References](#references)
 
@@ -57,15 +59,24 @@ npm run lint:fix
 
 ### Config
 
+First create the `.env` file:
+
 ```shell
 cp .env.example .env
 ```
 
-|       Name        |               Type                |    Default    |                                               Description                                               |
-|:-----------------:|:---------------------------------:|:-------------:|:-------------------------------------------------------------------------------------------------------:|
-|    `NODE_ENV`     | `production`,`development`,`test` | `development` | [Node.js][NODE_JS_WEBSITE] environment (`test` will be provided by the testing framework automatically) |
-| `SERVER_HOSTNAME` |              string               |  `localhost`  |                            [Express.js][EXPRESS_JS_WEBSITE] server hostname                             |
-|   `SERVER_PORT`   |              number               |    `3000`     |                              [Express.js][EXPRESS_JS_WEBSITE] server port                               |
+#### Common Config
+
+|    Name    |               Type                |    Default    |                                               Description                                               |
+|:----------:|:---------------------------------:|:-------------:|:-------------------------------------------------------------------------------------------------------:|
+| `NODE_ENV` | `production`,`development`,`test` | `development` | [Node.js][NODE_JS_WEBSITE] environment (`test` will be provided by the testing framework automatically) |
+
+#### Server Config
+
+| Name              |  Type   |   Default   |                   Description                    |
+|-------------------|:-------:|:-----------:|:------------------------------------------------:|
+| `SERVER_HOSTNAME` | string  | `localhost` | [Express.js][EXPRESS_JS_WEBSITE] server hostname |
+| `SERVER_PORT`     | integer |   `3000`    |   [Express.js][EXPRESS_JS_WEBSITE] server port   |
 
 ## Versioning
 
