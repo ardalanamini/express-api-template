@@ -1,5 +1,6 @@
 import router from "#src/router";
 import express from "express";
+import { parse } from "qs";
 
 /* ------------------------- EXPRESS INSTANCE ------------------------- */
 
@@ -9,7 +10,8 @@ const server = express();
 
 server
   .disable("x-powered-by")
-  .enable("trust proxy");
+  .enable("trust proxy")
+  .set("query parser", parse);
 
 /* ------------------------- SERVER ENDPOINTS ------------------------- */
 

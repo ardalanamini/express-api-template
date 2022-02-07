@@ -2,7 +2,7 @@
 
 [![Test][TEST_WORKFLOW_BADGE]][TEST_WORKFLOW_URL]
 
-This is a starter [Express.js][EXPRESS_JS_WEBSITE] API Template, helping to get past the routine of starting a new
+This is a starter _Express.js_[^EXPRESS_JS_FOOTNOTE] API Template, helping to get past the routine of starting a new
 project from scratch again and again!
 
 ## Table of Contents
@@ -15,11 +15,10 @@ project from scratch again and again!
     - [Common](#common-config)
     - [Server](#server-config)
 - [Versioning](#versioning)
-- [References](#references)
 
 ## Prerequisites
 
-- [Node.js][NODE_JS_WEBSITE] (`v16.13.2` or higher)
+- _Node.js_[^NODE_JS_FOOTNOTE] (`v16.13.2` or higher)
 
 ## Usage
 
@@ -31,7 +30,7 @@ npm i
 
 ### Build
 
-Build the project. (Using [`TypeScript`][TYPESCRIPT_WEBSITE])
+Build the project. (Using _TypeScript_[^TYPESCRIPT_FOOTNOTE])
 
 ```shell
 npm run build
@@ -45,7 +44,7 @@ npm run build:watch
 
 ### Lint
 
-Check for code style issues in the project. (Using [`ESLint`][ESLINT_WEBSITE])
+Check for code style issues in the project. (Using _ESLint_[^ESLINT_FOOTNOTE])
 
 ```shell
 npm run lint
@@ -67,29 +66,33 @@ cp .env.example .env
 
 #### Common Config
 
-|    Name    |               Type                |    Default    |                                               Description                                               |
-|:----------:|:---------------------------------:|:-------------:|:-------------------------------------------------------------------------------------------------------:|
-| `NODE_ENV` | `production`,`development`,`test` | `development` | [Node.js][NODE_JS_WEBSITE] environment (`test` will be provided by the testing framework automatically) |
+|    Name    |               Type                |    Default    |                                                Description                                                |
+|:----------:|:---------------------------------:|:-------------:|:---------------------------------------------------------------------------------------------------------:|
+| `NODE_ENV` | `production`,`development`,`test` | `development` | _Node.js_[^NODE_JS_FOOTNOTE] environment (`test` will be provided by the testing framework automatically) |
 
 #### Server Config
 
-| Name              |  Type   |   Default   |                   Description                    |
-|-------------------|:-------:|:-----------:|:------------------------------------------------:|
-| `SERVER_HOSTNAME` | string  | `localhost` | [Express.js][EXPRESS_JS_WEBSITE] server hostname |
-| `SERVER_PORT`     | integer |   `3000`    |   [Express.js][EXPRESS_JS_WEBSITE] server port   |
+| Name              |  Type   |   Default   |                    Description                     |
+|-------------------|:-------:|:-----------:|:--------------------------------------------------:|
+| `SERVER_HOSTNAME` | string  | `localhost` | _Express.js_[^EXPRESS_JS_FOOTNOTE] server hostname |
+| `SERVER_PORT`     | integer |   `3000`    |   _Express.js_[^EXPRESS_JS_FOOTNOTE] server port   |
 
 ## Versioning
 
-We use [SemVer][SEMVER_WEBSITE] for versioning. For the versions & changelogs available, see the releases on this
+We use _SemVer_[^SEMVER_FOOTNOTE] for versioning. For the versions & changelogs available, see the releases on this
 repository.
 
-## References
+<!-- Footnotes -->
 
-- [Node.js][NODE_JS_WEBSITE]
-- [Express.js][EXPRESS_JS_WEBSITE]
-- [TypeScript][TYPESCRIPT_WEBSITE]
-- [ESLint][ESLINT_WEBSITE]
-- [SemVer][SEMVER_WEBSITE]
+[^EXPRESS_JS_FOOTNOTE]: [Express.js][EXPRESS_JS_WEBSITE]
+
+[^NODE_JS_FOOTNOTE]: [Node.js][NODE_JS_WEBSITE]
+
+[^TYPESCRIPT_FOOTNOTE]: [TypeScript][TYPESCRIPT_WEBSITE]
+
+[^ESLINT_FOOTNOTE]: [ESLint][ESLINT_WEBSITE]
+
+[^SEMVER_FOOTNOTE]: [SemVer][SEMVER_WEBSITE]
 
 <!-- Links -->
 
