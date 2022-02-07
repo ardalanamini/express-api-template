@@ -1,7 +1,9 @@
 # Express.js API Template
 
-This is a starter [Express.js][EXPRESS_JS_WEBSITE] API Template, helping to get past the routine of starting a new project from scratch again
-and again!
+[![Test][TEST_WORKFLOW_BADGE]][TEST_WORKFLOW_URL]
+
+This is a starter [Express.js][EXPRESS_JS_WEBSITE] API Template, helping to get past the routine of starting a new
+project from scratch again and again!
 
 ## Table of Contents
 
@@ -66,6 +68,10 @@ repository.
 - [SemVer][SEMVER_WEBSITE]
 
 <!-- Links -->
+
+[TEST_WORKFLOW_URL]: https://github.com/ardalanamini/express-api-template/actions/workflows/test.yml
+
+[TEST_WORKFLOW_BADGE]: https://github.com/ardalanamini/express-api-template/actions/workflows/test.yml/badge.svg
 
 [NODE_JS_WEBSITE]: https://nodejs.org/en
 
