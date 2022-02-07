@@ -1,0 +1,28 @@
+{
+  "name": "express-api-template",
+  "version": "1.0.0",
+  "description": "Express.js API Template",
+  "private": true,
+  "author": "Ardalan Amini <ardalanamini22@gmail.com> (https://ardalanamini.com)",
+  "homepage": "https://github.com/ardalanamini/express-api-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardalanamini/express-api-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ardalanamini/express-api-template/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node.js",
+    "express.js",
+    "api"
+  ],
+  "engines": {
+    "node": ">=16.13.2"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

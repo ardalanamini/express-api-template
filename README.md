@@ -1,2 +1,1 @@
-# express-api-template
-Express.js API Template
+# Express.js API Template
