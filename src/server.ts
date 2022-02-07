@@ -1,7 +1,10 @@
+import { NODE_ENV } from "#src/config/index";
+import { ENV } from "#src/constants/index";
 import router from "#src/router";
 import cors from "cors";
 import express from "express";
 import helmet from "helmet";
+import morgan from "morgan";
 import { parse } from "qs";
 
 /* ------------------------- EXPRESS INSTANCE ------------------------- */
@@ -17,6 +20,8 @@ server
   .set("json replacer fn", (key: string, value: unknown): unknown => key[0] === "_" ? undefined : value);
 
 /* ------------------------- SERVER MIDDLEWARES ------------------------- */
+
+if (NODE_ENV === ENV.DEVELOPMENT) server.use(morgan("dev"));
 
 server
   .use(cors())
