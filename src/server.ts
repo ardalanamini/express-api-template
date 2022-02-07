@@ -1,6 +1,7 @@
 import router from "#src/router";
 import cors from "cors";
 import express from "express";
+import helmet from "helmet";
 import { parse } from "qs";
 
 /* ------------------------- EXPRESS INSTANCE ------------------------- */
@@ -18,7 +19,8 @@ server
 /* ------------------------- SERVER MIDDLEWARES ------------------------- */
 
 server
-  .use(cors());
+  .use(cors())
+  .use(helmet());
 
 /* ------------------------- SERVER ENDPOINTS ------------------------- */
 
