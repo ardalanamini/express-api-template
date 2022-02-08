@@ -139,6 +139,9 @@ npm run start:watch
 
 ```
 .
+├── __tests__        # Test files
+│   ├── controllers  # Express.js controller tests
+│   └── jest         # Test utilities
 ├── docs             # Static documents
 └── src              # Source files
     ├── config       # Configuration values
