@@ -13,6 +13,8 @@ project from scratch again and again!
 - [Usage](#usage)
   - [Build](#build)
   - [Code Style](#code-style)
+  - [Documents](#documents)
+    - [API](#api-documents)
   - [Config](#config)
     - [Common](#common-config)
     - [Server](#server-config)
@@ -58,6 +60,22 @@ Fix code style issues in the project.
 
 ```shell
 npm run lint:fix
+```
+
+### Documents
+
+#### API Documents
+
+Generate the API documents to be served statically. (Using _Swagger_[^SWAGGER_FOOTNOTE])
+
+```shell
+npm run docs:swagger
+```
+
+Generate & serve the API documents. (The documents' server address will be printed in the terminal)
+
+```shell
+npm run docs:api
 ```
 
 ### Config
@@ -121,6 +139,8 @@ repository.
 
 [^ESLINT_FOOTNOTE]: [ESLint][ESLINT_WEBSITE]
 
+[^SWAGGER_FOOTNOTE]: [Swagger][SWAGGER_WEBSITE]
+
 [^SEMVER_FOOTNOTE]: [SemVer][SEMVER_WEBSITE]
 
 <!-- Links -->
@@ -136,5 +156,7 @@ repository.
 [TYPESCRIPT_WEBSITE]: https://www.typescriptlang.org
 
 [ESLINT_WEBSITE]: https://eslint.org
+
+[SWAGGER_WEBSITE]: https://swagger.io
 
 [SEMVER_WEBSITE]: http://semver.org

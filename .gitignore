@@ -109,3 +109,6 @@ dist
 
 # Build Directory
 .build
+
+# Documents
+docs/swagger.yaml

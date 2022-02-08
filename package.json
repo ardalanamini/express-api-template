@@ -33,6 +33,8 @@
     "build:watch": "npm run build -- --watch",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix",
+    "docs:swagger": "swagger-jsdoc -d ./swagger.config.js -o ./docs/swagger.yaml './src/controllers/**/*.ts'",
+    "docs:api": "npm run docs:swagger && redoc-cli serve ./docs/swagger.yaml",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -57,6 +59,8 @@
     "eslint-import-resolver-typescript": "2.5.0",
     "eslint-plugin-import": "2.25.4",
     "nodemon": "2.0.15",
+    "redoc-cli": "0.13.7",
+    "swagger-jsdoc": "6.1.0",
     "typescript": "4.5.5"
   }
 }
