@@ -42,3 +42,6 @@ jobs:
 
       - name: Check code styles
         run: npm run lint
+
+      - name: Generate Swagger documents
+        run: npm run docs:swagger
