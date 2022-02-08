@@ -5,12 +5,14 @@
 This is a starter _Express.js_[^EXPRESS_JS_FOOTNOTE] API Template, helping to get past the routine of starting a new
 project from scratch again and again!
 
+> This template is still in WIP phase!
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)
   - [Build](#build)
-  - [Lint](#lint)
+  - [Code Style](#code-style)
   - [Config](#config)
     - [Common](#common-config)
     - [Server](#server-config)
@@ -44,7 +46,7 @@ Watch for changes and rebuild automatically.
 npm run build:watch
 ```
 
-### Lint
+### Code Style
 
 Check for code style issues in the project. (Using _ESLint_[^ESLINT_FOOTNOTE])
 
@@ -98,7 +100,7 @@ npm run start:watch
 ```
 .
 └── src              # Source files
-    ├── config       # Config values
+    ├── config       # Configuration values
     ├── constants    # Constants
     ├── controllers  # Express.js controllers
     └── lib          # Libraries
