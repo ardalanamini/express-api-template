@@ -117,6 +117,7 @@ npm run start:watch
 
 ```
 .
+├── docs             # Static documents
 └── src              # Source files
     ├── config       # Configuration values
     ├── constants    # Constants
