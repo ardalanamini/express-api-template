@@ -136,7 +136,7 @@ Watch for changes and restart automatically.
 npm run start:watch
 ```
 
-## Docker
+### Docker
 
 Start the services:
 
