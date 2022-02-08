@@ -1,6 +1,7 @@
 # Express.js API Template
 
 [![Test][TEST_WORKFLOW_BADGE]][TEST_WORKFLOW_URL]
+[![CodeCov][CODECOV_BADGE]][CODECOV_URL]
 
 This is a starter _Express.js_[^EXPRESS_JS_FOOTNOTE] API Template, helping to get past the routine of starting a new
 project from scratch again and again!
@@ -172,6 +173,10 @@ repository.
 [TEST_WORKFLOW_URL]: https://github.com/ardalanamini/express-api-template/actions/workflows/test.yml
 
 [TEST_WORKFLOW_BADGE]: https://github.com/ardalanamini/express-api-template/actions/workflows/test.yml/badge.svg
+
+[CODECOV_URL]: https://codecov.io/gh/ardalanamini/express-api-template
+
+[CODECOV_BADGE]: https://codecov.io/gh/ardalanamini/express-api-template/branch/main/graph/badge.svg?token=PSHIW2SL1S
 
 [NODE_JS_WEBSITE]: https://nodejs.org/en
 
