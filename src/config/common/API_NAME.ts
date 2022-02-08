@@ -2,4 +2,4 @@
 // @ts-ignore
 import { name } from "#package.json";
 
-export const API_NAME = name;
+export const API_NAME = name as string;

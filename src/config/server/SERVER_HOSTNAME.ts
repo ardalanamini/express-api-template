@@ -3,7 +3,6 @@ import { Joi } from "#src/lib/Joi";
 const { error, value } = Joi
   .string()
   .hostname()
-  .required()
   .default("localhost")
   .label("SERVER_HOSTNAME")
   .validate(process.env.SERVER_HOSTNAME);

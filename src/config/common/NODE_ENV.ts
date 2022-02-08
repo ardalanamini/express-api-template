@@ -4,7 +4,6 @@ import { Joi } from "#src/lib/Joi";
 const { error, value } = Joi
   .string()
   .valid(...Object.values(ENV))
-  .required()
   .default(ENV.DEVELOPMENT)
   .label("NODE_ENV")
   .validate(process.env.NODE_ENV);
