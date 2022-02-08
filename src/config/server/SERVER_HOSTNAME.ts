@@ -8,6 +8,7 @@ const { error, value } = Joi
   .label("SERVER_HOSTNAME")
   .validate(process.env.SERVER_HOSTNAME);
 
+/* istanbul ignore next */
 if (error != null) throw error;
 
 export const SERVER_HOSTNAME = value as string;

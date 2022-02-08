@@ -12,6 +12,7 @@ project from scratch again and again!
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)
   - [Build](#build)
+  - [Test](#test)
   - [Code Style](#code-style)
   - [Documents](#documents)
     - [API](#api-documents)
@@ -46,6 +47,26 @@ Watch for changes and rebuild automatically.
 
 ```shell
 npm run build:watch
+```
+
+### Test
+
+Test the project. (Using _Jest_[^JEST_FOOTNOTE])
+
+```shell
+npm test
+```
+
+Test with code coverage report.
+
+```shell
+npm run test:coverage
+```
+
+Test in ci.
+
+```shell
+npm run test:ci
 ```
 
 ### Code Style
@@ -138,6 +159,8 @@ repository.
 
 [^TYPESCRIPT_FOOTNOTE]: [TypeScript][TYPESCRIPT_WEBSITE]
 
+[^JEST_FOOTNOTE]: [Jest][JEST_WEBSITE]
+
 [^ESLINT_FOOTNOTE]: [ESLint][ESLINT_WEBSITE]
 
 [^SWAGGER_FOOTNOTE]: [Swagger][SWAGGER_WEBSITE]
@@ -155,6 +178,8 @@ repository.
 [EXPRESS_JS_WEBSITE]: https://expressjs.com
 
 [TYPESCRIPT_WEBSITE]: https://www.typescriptlang.org
+
+[JEST_WEBSITE]: https://jestjs.io
 
 [ESLINT_WEBSITE]: https://eslint.org
 

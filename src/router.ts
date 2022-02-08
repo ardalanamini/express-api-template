@@ -12,7 +12,7 @@ const ROUTER = Router();
 
 const CONTROLLERS = requireAll({
   dirname: path.resolve(__dirname, "controllers"),
-  filter: NODE_ENV === ENV.TEST ? /(.+)\.ts$/ : /(.+)\.js$/,
+  filter: NODE_ENV === ENV.TEST ? /(.+)\.ts$/ : /* istanbul ignore next */ /(.+)\.js$/,
   recursive: true,
 });
 

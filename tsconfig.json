@@ -30,6 +30,7 @@
     "baseUrl": "./",                                     /* Specify the base directory to resolve non-relative module names. */
     "paths": {                                           /* Specify a set of entries that re-map imports to additional lookup locations. */
       "#src/*": ["src/*"],
+      "#test": ["__tests__/jest/index.ts"],
       "#package.json": ["package.json"]
     },
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
@@ -102,5 +103,5 @@
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
   "include": ["src"],
-  "exclude": [".build"]
+  "exclude": [".build", "__tests__"]
 }

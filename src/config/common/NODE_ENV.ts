@@ -9,6 +9,7 @@ const { error, value } = Joi
   .label("NODE_ENV")
   .validate(process.env.NODE_ENV);
 
+/* istanbul ignore next */
 if (error != null) throw error;
 
 process.env.NODE_ENV = value;

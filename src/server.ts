@@ -21,6 +21,7 @@ server
 
 /* ------------------------- SERVER MIDDLEWARES ------------------------- */
 
+/* istanbul ignore next */
 if (NODE_ENV === ENV.DEVELOPMENT) server.use(morgan("dev"));
 
 server
