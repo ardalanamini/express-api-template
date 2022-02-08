@@ -49,9 +49,9 @@ jobs:
       - name: Test the project
         run: npm run test:ci
 
-#      - name: Upload coverage to Codecov
-#        uses: codecov/codecov-action@v2
-#        with:
+      - name: Upload coverage to CodeCov
+        uses: codecov/codecov-action@v2
+        with:
 #          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-#          env_vars: NODE_VERSION
-#          fail_ci_if_error: true
+          env_vars: NODE_VERSION
+          fail_ci_if_error: true
