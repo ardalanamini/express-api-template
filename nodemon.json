@@ -1,0 +1,5 @@
+{
+  "verbose": true,
+  "ignore": [".build/*", "*.tsbuildinfo"],
+  "ext": "ts,json"
+}

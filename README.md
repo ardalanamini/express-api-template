@@ -14,6 +14,8 @@ project from scratch again and again!
   - [Config](#config)
     - [Common](#common-config)
     - [Server](#server-config)
+  - [Start](#start)
+- [Directory Layout](#directory-layout)
 - [Versioning](#versioning)
 
 ## Prerequisites
@@ -76,6 +78,31 @@ cp .env.example .env
 |-------------------|:-------:|:-----------:|:--------------------------------------------------:|
 | `SERVER_HOSTNAME` | string  | `localhost` | _Express.js_[^EXPRESS_JS_FOOTNOTE] server hostname |
 | `SERVER_PORT`     | integer |   `3000`    |   _Express.js_[^EXPRESS_JS_FOOTNOTE] server port   |
+
+### Start
+
+Start the API.
+
+```shell
+npm start
+```
+
+Watch for changes and restart automatically.
+
+```shell
+npm run start:watch
+```
+
+## Directory Layout
+
+```
+.
+└── src              # Source files
+    ├── config       # Config values
+    ├── constants    # Constants
+    ├── controllers  # Express.js controllers
+    └── lib          # Libraries
+```
 
 ## Versioning
 

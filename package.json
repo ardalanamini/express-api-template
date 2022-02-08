@@ -28,6 +28,7 @@
   "main": ".build/index.js",
   "scripts": {
     "start": "node .build/index.js",
+    "start:watch": "nodemon --exec 'npm run build && npm start'",
     "build": "tsc",
     "build:watch": "npm run build -- --watch",
     "lint": "eslint src",
@@ -55,6 +56,7 @@
     "eslint": "8.8.0",
     "eslint-import-resolver-typescript": "2.5.0",
     "eslint-plugin-import": "2.25.4",
+    "nodemon": "2.0.15",
     "typescript": "4.5.5"
   }
 }
