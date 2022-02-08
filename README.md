@@ -21,6 +21,7 @@ project from scratch again and again!
     - [Common](#common-config)
     - [Server](#server-config)
   - [Start](#start)
+  - [Docker](#docker)[^DOCKER_FOOTNOTE]
 - [Directory Layout](#directory-layout)
 - [Versioning](#versioning)
 
@@ -135,6 +136,20 @@ Watch for changes and restart automatically.
 npm run start:watch
 ```
 
+## Docker
+
+Start the services:
+
+```shell
+docker-compose up -d --build --remove-orphans
+```
+
+Stop the services:
+
+```shell
+docker-compose down
+```
+
 ## Directory Layout
 
 ```
@@ -171,6 +186,8 @@ repository.
 
 [^SEMVER_FOOTNOTE]: [SemVer][SEMVER_WEBSITE]
 
+[^DOCKER_FOOTNOTE]: [Docker][DOCKER_WEBSITE]
+
 <!-- Links -->
 
 [TEST_WORKFLOW_URL]: https://github.com/ardalanamini/express-api-template/actions/workflows/test.yml
@@ -194,3 +211,5 @@ repository.
 [SWAGGER_WEBSITE]: https://swagger.io
 
 [SEMVER_WEBSITE]: http://semver.org
+
+[DOCKER_WEBSITE]: https://www.docker.com
