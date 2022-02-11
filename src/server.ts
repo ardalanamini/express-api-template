@@ -1,5 +1,6 @@
 import { NODE_ENV } from "#src/config/index";
 import { ENV } from "#src/constants/index";
+import { Sentry } from "#src/lib/index";
 import router from "#src/router";
 import cors from "cors";
 import express from "express";
@@ -12,6 +13,16 @@ import { parse } from "qs";
 const server = express();
 
 /* ------------------------- EXPRESS SETTINGS ------------------------- */
+
+// The request handler must be the first middleware on the server
+// RequestHandler creates a separate execution context using domains, so that every
+// transaction/span/breadcrumb is attached to its own Hub instance
+server.use(Sentry.Handlers.requestHandler({
+  user: ["id"],
+  ip: true,
+}));
+// TracingHandler creates a trace for every incoming request
+server.use(Sentry.Handlers.tracingHandler());
 
 server
   .disable("x-powered-by")
@@ -31,6 +42,23 @@ server
 /* ------------------------- SERVER ENDPOINTS ------------------------- */
 
 server.use(router);
+
+/* ------------------------- SERVER ERROR HANDLERS ------------------------- */
+
+// The error handler must be before any other error middleware and after all controllers
+server.use(Sentry.Handlers.errorHandler());
+// TODO: custom errors
+// server.use(
+//   Sentry.Handlers.errorHandler({
+//     shouldHandleError(error) {
+//       // Capture all 404 and 500 errors
+//       if (error.status === 404 || error.status === 500) {
+//         return true;
+//       }
+//       return false;
+//     },
+//   }),
+// );
 
 /* ------------------------- SERVER EXPORTS ------------------------- */
 

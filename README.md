@@ -20,6 +20,7 @@ project from scratch again and again!
   - [Config](#config)
     - [Common](#common-config)
     - [Server](#server-config)
+    - [Sentry](#sentry-config)
   - [Start](#start)
   - [Docker](#docker)[^DOCKER_FOOTNOTE]
 - [Directory Layout](#directory-layout)
@@ -111,9 +112,10 @@ cp .env.example .env
 
 #### Common Config
 
-|    Name    |               Type                |    Default    |                                                Description                                                |
-|:----------:|:---------------------------------:|:-------------:|:---------------------------------------------------------------------------------------------------------:|
-| `NODE_ENV` | `production`,`development`,`test` | `development` | _Node.js_[^NODE_JS_FOOTNOTE] environment (`test` will be provided by the testing framework automatically) |
+|     Name      |               Type                |    Default    |                                                Description                                                |
+|:-------------:|:---------------------------------:|:-------------:|:---------------------------------------------------------------------------------------------------------:|
+|  `NODE_ENV`   | `production`,`development`,`test` | `development` | _Node.js_[^NODE_JS_FOOTNOTE] environment (`test` will be provided by the testing framework automatically) |
+| `RELEASE_ENV` |      `production`,`staging`       |   `staging`   |                                            Release environment                                            |
 
 #### Server Config
 
@@ -121,6 +123,12 @@ cp .env.example .env
 |-------------------|:-------:|:-----------:|:--------------------------------------------------:|
 | `SERVER_HOSTNAME` | string  | `localhost` | _Express.js_[^EXPRESS_JS_FOOTNOTE] server hostname |
 | `SERVER_PORT`     | integer |   `3000`    |   _Express.js_[^EXPRESS_JS_FOOTNOTE] server port   |
+
+#### Sentry Config
+
+| Name         |  Type  | Default |                 Description                  |
+|--------------|:------:|:-------:|:--------------------------------------------:|
+| `SENTRY_DSN` | string |    -    | _Sentry_[^SENTRY_FOOTNOTE] project DSN value |
 
 ### Start
 
@@ -188,6 +196,8 @@ repository.
 
 [^DOCKER_FOOTNOTE]: [Docker][DOCKER_WEBSITE]
 
+[^SENTRY_FOOTNOTE]: [Sentry][SENTRY_WEBSITE]
+
 <!-- Links -->
 
 [TEST_WORKFLOW_URL]: https://github.com/ardalanamini/express-api-template/actions/workflows/test.yml
@@ -213,3 +223,5 @@ repository.
 [SEMVER_WEBSITE]: http://semver.org
 
 [DOCKER_WEBSITE]: https://www.docker.com
+
+[SENTRY_WEBSITE]: https://sentry.io
