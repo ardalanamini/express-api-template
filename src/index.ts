@@ -1,6 +1,7 @@
 import { SENTRY_ENABLED, SERVER_HOSTNAME, SERVER_PORT } from "#src/config/index";
 import { Sentry } from "#src/lib/index";
 import { promisify } from "node:util";
+import database from "./database";
 import server from "./server";
 
 const httpServer = server.listen(
@@ -21,6 +22,9 @@ async function shutdown() {
   try {
     // Stop receiving new requests!
     await promisify(httpServer.close.bind(httpServer))();
+
+    // Close the DB connection, now that there is no ongoing operations!
+    await database.disconnect();
 
     // Gracefully close Sentry connection
     if (SENTRY_ENABLED) await Sentry.close();

@@ -20,6 +20,7 @@ project from scratch again and again!
   - [Config](#config)
     - [Common](#common-config)
     - [Server](#server-config)
+    - [Database](#database-config)
     - [Sentry](#sentry-config)
   - [Start](#start)
   - [Docker](#docker)[^DOCKER_FOOTNOTE]
@@ -29,6 +30,7 @@ project from scratch again and again!
 ## Prerequisites
 
 - _Node.js_[^NODE_JS_FOOTNOTE] (`v16.13.2` or higher)
+- _MongoDB_[^MONGODB_FOOTNOTE] (`v5`)
 
 ## Usage
 
@@ -124,6 +126,12 @@ cp .env.example .env
 | `SERVER_HOSTNAME` | string  | `localhost` | _Express.js_[^EXPRESS_JS_FOOTNOTE] server hostname |
 | `SERVER_PORT`     | integer |   `3000`    |   _Express.js_[^EXPRESS_JS_FOOTNOTE] server port   |
 
+#### Database Config
+
+| Name           |  Type  | Default |                    Description                     |
+|----------------|:------:|:-------:|:--------------------------------------------------:|
+| `DATABASE_URI` | string |    -    | _MongoDB_[^MONGODB_FOOTNOTE] connection string uri |
+
 #### Sentry Config
 
 | Name         |  Type  | Default |                 Description                  |
@@ -196,6 +204,8 @@ repository.
 
 [^DOCKER_FOOTNOTE]: [Docker][DOCKER_WEBSITE]
 
+[^MONGODB_FOOTNOTE]: [MongoDB][MONGODB_WEBSITE]
+
 [^SENTRY_FOOTNOTE]: [Sentry][SENTRY_WEBSITE]
 
 <!-- Links -->
@@ -223,5 +233,7 @@ repository.
 [SEMVER_WEBSITE]: http://semver.org
 
 [DOCKER_WEBSITE]: https://www.docker.com
+
+[MONGODB_WEBSITE]: https://www.mongodb.com
 
 [SENTRY_WEBSITE]: https://sentry.io
