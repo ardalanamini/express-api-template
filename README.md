@@ -178,7 +178,8 @@ docker-compose down
     ├── config       # Configuration values
     ├── constants    # Constants
     ├── controllers  # Express.js controllers
-    └── lib          # Libraries
+    ├── lib          # Libraries
+    └── models       # Database models
 ```
 
 ## Versioning
