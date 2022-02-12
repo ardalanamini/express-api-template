@@ -103,5 +103,5 @@
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
   "include": ["src"],
-  "exclude": [".build", "__tests__"]
+  "exclude": [".build", "__tests__", "**/__mocks__"]
 }
