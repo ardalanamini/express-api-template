@@ -28,5 +28,11 @@ module.exports = {
         "Information",
       ],
     },
+    {
+      name: "Models",
+      tags: [
+        "token_model", "user_model",
+      ],
+    },
   ],
 };

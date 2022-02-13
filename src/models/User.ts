@@ -71,3 +71,55 @@ export interface UserI extends TimestampsI, SoftDeleteTimestampsI {
 
   birth_date: Date;
 }
+
+/* ------------------------- SWAGGER ------------------------- */
+
+/**
+ * @swagger
+ *
+ * definitions:
+ *   User:
+ *     allOf:
+ *       - $ref: "#/definitions/DBDocument"
+ *       - $ref: "#/definitions/SoftDeletableDocument"
+ *       - required:
+ *           - email
+ *           - name
+ *           - birth_date
+ *         properties:
+ *           email:
+ *             type: string
+ *             format: email
+ *             example: ardalanamini22@gmail.com
+ *           name:
+ *             type: object
+ *             required:
+ *               - first
+ *             properties:
+ *                 first:
+ *                   type: string
+ *                   example: Ardalan
+ *                 last:
+ *                   type: string
+ *                   example: Amini
+ *           birth_date:
+ *             type: string
+ *             format: date
+ *             example: 2022-02-13
+ *
+ * parameters:
+ *   user_id_parameter:
+ *     in: path
+ *     name: user_id
+ *     description: "User id"
+ *     required: true
+ *     schema:
+ *       $ref: "#/definitions/ObjectID"
+ *
+ * tags:
+ *   name: user_model
+ *   x-displayName: User
+ *   description: |
+ *     <SchemaDefinition schemaRef="#/definitions/User" showReadOnly={true} showWriteOnly={true} />
+ *
+ */

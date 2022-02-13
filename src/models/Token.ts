@@ -112,3 +112,48 @@ export interface TokenI extends TimestampsI {
     version: string;
   };
 }
+
+/* ------------------------- SWAGGER ------------------------- */
+
+/**
+ * @swagger
+ *
+ * definitions:
+ *   Token:
+ *     allOf:
+ *       - $ref: "#/definitions/DBDocument"
+ *       - required:
+ *           - user
+ *           - status
+ *           - expires_at
+ *         properties:
+ *           user:
+ *             $ref: "#/definitions/ObjectID"
+ *           status:
+ *             type: string
+ *             readOnly: true
+ *             default: active
+ *             enum:
+ *               - active
+ *               - refreshed
+ *               - logged-out
+ *               - expired
+ *           expires_at:
+ *             $ref: "#/definitions/Timestamp"
+ *
+ * parameters:
+ *   token_id_parameter:
+ *     in: path
+ *     name: token_id
+ *     description: "Token id"
+ *     required: true
+ *     schema:
+ *       $ref: "#/definitions/ObjectID"
+ *
+ * tags:
+ *   name: token_model
+ *   x-displayName: Token
+ *   description: |
+ *     <SchemaDefinition schemaRef="#/definitions/Token" showReadOnly={true} showWriteOnly={true} />
+ *
+ */
