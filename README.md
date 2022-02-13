@@ -17,6 +17,7 @@ project from scratch again and again!
   - [Code Style](#code-style)
   - [Documents](#documents)
     - [API](#api-documents)
+    - [Code](#code-documents)
   - [Config](#config)
     - [Common](#common-config)
     - [Server](#server-config)
@@ -104,6 +105,16 @@ Generate & serve the API documents. (The documents' server address will be print
 npm run docs:api
 ```
 
+#### Code Documents
+
+Generate the Code documents to be served statically. (Using _TypeDoc_[^TYPEDOC_FOOTNOTE])
+
+```shell
+npm run docs:code
+```
+
+After running this command, open `docs/code/index.html` in your preferred browser.
+
 ### Config
 
 First create the `.env` file:
@@ -174,6 +185,8 @@ docker-compose down
 │   ├── controllers  # Express.js controller tests
 │   └── jest         # Test utilities
 ├── docs             # Static documents
+│   ├── api          # API documents
+│   └── code         # Code documents
 └── src              # Source files
     ├── config       # Configuration values
     ├── constants    # Constants
@@ -200,6 +213,8 @@ repository.
 [^ESLINT_FOOTNOTE]: [ESLint][ESLINT_WEBSITE]
 
 [^SWAGGER_FOOTNOTE]: [Swagger][SWAGGER_WEBSITE]
+
+[^TYPEDOC_FOOTNOTE]: [TypeDoc][TYPEDOC_WEBSITE]
 
 [^SEMVER_FOOTNOTE]: [SemVer][SEMVER_WEBSITE]
 
@@ -230,6 +245,8 @@ repository.
 [ESLINT_WEBSITE]: https://eslint.org
 
 [SWAGGER_WEBSITE]: https://swagger.io
+
+[TYPEDOC_WEBSITE]: https://typedoc.org
 
 [SEMVER_WEBSITE]: http://semver.org
 

@@ -306,4 +306,5 @@ GitHub.sublime-settings
 .build/
 
 # Documents
-docs/swagger.yaml
+docs/api/swagger.yaml
+docs/code/

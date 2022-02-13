@@ -33,8 +33,9 @@
     "build:watch": "npm run build -- --watch",
     "lint": "eslint src __tests__",
     "lint:fix": "npm run lint -- --fix",
-    "docs:swagger": "swagger-jsdoc -d ./swagger.config.js -o ./docs/swagger.yaml './src/controllers/**/*.ts'",
-    "docs:api": "npm run docs:swagger && redoc-cli serve ./docs/swagger.yaml",
+    "docs:swagger": "swagger-jsdoc -d ./swagger.config.js -o docs/api/swagger.yaml './src/models/**/*.ts' './src/controllers/**/*.ts'",
+    "docs:api": "npm run docs:swagger && redoc-cli serve ./docs/api/swagger.yaml",
+    "docs:code": "typedoc",
     "test": "jest",
     "test:coverage": "npm test -- --coverage",
     "test:ci": "npm run test:coverage -- ---ci -runInBand --verbose --logHeapUsage"
@@ -74,6 +75,8 @@
     "supertest": "6.2.2",
     "swagger-jsdoc": "6.1.0",
     "ts-jest": "27.1.3",
+    "typedoc": "0.22.11",
+    "typedoc-theme-hierarchy": "1.0.14",
     "typescript": "4.5.5"
   }
 }
