@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM node:16.13.2-alpine AS build
+FROM node:16.14.0-alpine AS build
 
 RUN npm i -g npm@8.4.1
 
@@ -14,7 +14,7 @@ COPY . .
 
 RUN npm run build
 
-FROM node:16.13.2-alpine
+FROM node:16.14.0-alpine
 
 EXPOSE 3000
 
