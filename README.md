@@ -187,6 +187,7 @@ docker-compose down
 ├── docs             # Static documents
 │   ├── api          # API documents
 │   └── code         # Code documents
+├── scripts          # Project scripts
 └── src              # Source files
     ├── config       # Configuration values
     ├── constants    # Constants

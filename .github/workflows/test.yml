@@ -46,7 +46,7 @@ jobs:
       - name: Generate Swagger documents
         run: npm run docs:swagger
 
-      - name: Generate Code documents
+      - name: Generate code documents
         run: npm run docs:code
 
       - name: Test the project
