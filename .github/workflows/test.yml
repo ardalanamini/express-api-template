@@ -18,7 +18,7 @@ jobs:
     timeout-minutes: 10
 
     env:
-      NODE_VERSION: 16.13.2
+      NODE_VERSION: 16.14.0
 
     steps:
       - uses: actions/checkout@v2
@@ -45,6 +45,9 @@ jobs:
 
       - name: Generate Swagger documents
         run: npm run docs:swagger
+
+      - name: Generate Code documents
+        run: npm run docs:code
 
       - name: Test the project
         run: npm run test:ci
