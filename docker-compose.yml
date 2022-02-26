@@ -15,13 +15,24 @@ services:
     ports:
       - "3000:3000"
     depends_on:
+      - database-setup
+
+  database-setup:
+    image: mongo:5.0.6
+    container_name: express-template-database-setup
+    restart: on-failure
+    entrypoint:
+      - /scripts/mongodb-replica-setup.sh
+    volumes:
+      - ./scripts:/scripts
+    depends_on:
       - database
 
   database:
     image: mongo:5.0.6
     container_name: express-template-database
     restart: unless-stopped
-    command: --bind_ip_all
+    command: --bind_ip_all --replSet rs0
     environment:
       - MONGO_INITDB_DATABASE=api
     ports:
