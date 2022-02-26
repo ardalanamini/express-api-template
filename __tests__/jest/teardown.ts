@@ -6,5 +6,7 @@ export default async function setup() {
 
   await MONGOD.stop();
 
-  await MONGOD.cleanup(true);
+  await MONGOD.cleanup({
+    force: true,
+  });
 }
