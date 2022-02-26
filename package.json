@@ -68,7 +68,7 @@
     "eslint": "8.8.0",
     "eslint-import-resolver-typescript": "2.5.0",
     "eslint-plugin-import": "2.25.4",
-    "jest": "27.5.0",
+    "jest": "27.5.1",
     "mongodb-memory-server": "8.4.0",
     "nodemon": "2.0.15",
     "redoc-cli": "0.13.8",
