@@ -56,12 +56,12 @@ jobs:
   deploy:
     name: Deploy
 
-    if: ${{ github.event.inputs.environment != 'docker' }}
+    if: ${{ inputs.environment != 'docker' }}
 
-    environment: ${{ github.event.inputs.environment }}
+    environment: ${{ inputs.environment }}
 
     concurrency:
-      group: ${{ github.event.inputs.environment }}
+      group: ${{ inputs.environment }}
       cancel-in-progress: true
 
     needs:
