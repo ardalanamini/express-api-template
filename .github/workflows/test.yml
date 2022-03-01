@@ -19,6 +19,7 @@ jobs:
     timeout-minutes: 10
 
     env:
+      REF: ${{ github.ref_name }}
       NODE_VERSION: 16.14.0
 
     steps:
@@ -62,5 +63,5 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
 #          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          env_vars: NODE_VERSION
+          env_vars: REF,NODE_VERSION
           fail_ci_if_error: true
