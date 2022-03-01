@@ -27,10 +27,15 @@ jobs:
         uses: actions/cache@v2
         with:
           path: '**/node_modules'
-          key: ${{ env.NODE_VERSION }}-modules-${{ hashFiles('**/package-lock.json') }}
+          key: node-modules-${{ github.ref_name }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            node-modules-${{ github.ref_name }}-${{ env.NODE_VERSION }}
+            node-modules-main-${{ env.NODE_VERSION }}
+            node-modules-${{ github.ref_name }}-
+            node-modules-main-
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
 
