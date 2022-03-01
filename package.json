@@ -63,7 +63,7 @@
     "@types/node": "16.11.26",
     "@types/require-all": "3.0.3",
     "@types/supertest": "2.0.11",
-    "@typescript-eslint/eslint-plugin": "5.12.1",
+    "@typescript-eslint/eslint-plugin": "5.13.0",
     "@typescript-eslint/parser": "5.12.1",
     "eslint": "8.10.0",
     "eslint-import-resolver-typescript": "2.5.0",
