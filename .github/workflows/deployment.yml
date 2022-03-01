@@ -7,6 +7,10 @@ on:
         description: Deployment Environment
         type: string
         required: true
+      deployment_url:
+        description: Deployment URL
+        type: string
+        required: true
 
 jobs:
   docker_registery:
@@ -58,7 +62,9 @@ jobs:
 
     if: ${{ inputs.environment != 'docker' }}
 
-    environment: ${{ inputs.environment }}
+    environment:
+      name: ${{ inputs.environment }}
+      url: ${{ inputs.deployment_url }}
 
     concurrency:
       group: ${{ inputs.environment }}

@@ -12,6 +12,7 @@ jobs:
 
     with:
       environment: staging
+      deployment_url: https://github.com/${{ github.repository }}
 
     needs:
       - test
