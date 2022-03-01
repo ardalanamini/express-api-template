@@ -1,0 +1,75 @@
+name: Deployment
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: Deployment Environment
+        type: string
+        required: true
+
+jobs:
+  docker_registery:
+    name: Push Docker image to GitHub Packages
+
+    environment:
+      name: docker
+      url: https://github.com/${{ github.repository }}/packages
+
+    concurrency: docker_registery
+
+    permissions:
+      contents: read
+      packages: write
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ github.token }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        uses: docker/metadata-action@v3
+        id: meta
+        with:
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=sha,format=long
+
+      - name: Push to GitHub Packages
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  deploy:
+    name: Deploy
+
+    if: ${{ github.event.inputs.environment != 'docker' }}
+
+    environment: ${{ github.event.inputs.environment }}
+
+    concurrency:
+      group: ${{ github.event.inputs.environment }}
+      cancel-in-progress: true
+
+    needs:
+      - docker_registery
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # Deployment steps

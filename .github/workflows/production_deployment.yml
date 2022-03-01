@@ -1,0 +1,48 @@
+name: Production Deployment
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+
+  deploy:
+    uses: ./.github/workflows/deployment.yml
+
+    with:
+      environment: production
+
+    needs:
+      - test
+
+  release:
+    name: Create Release
+
+    concurrency: github-release
+
+    environment:
+      name: release
+      url: https://github.com/${{ github.repository }}/releases
+
+    runs-on: ubuntu-latest
+
+    needs:
+      - test
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Changelog
+        uses: ardalanamini/auto-changelog@v1
+        id: changelog
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          body: |
+            ${{ steps.changelog.outputs.changelog }}
