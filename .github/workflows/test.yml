@@ -60,7 +60,7 @@ jobs:
         run: npm run test:ci
 
       - name: Upload coverage to CodeCov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
         with:
 #          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           env_vars: REF,NODE_VERSION
