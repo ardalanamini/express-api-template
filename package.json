@@ -36,7 +36,7 @@
     "docs:swagger": "swagger-jsdoc -d ./swagger.config.js -o docs/api/swagger.yaml './src/models/**/*.ts' './src/controllers/**/*.ts'",
     "docs:api": "npm run docs:swagger && redoc-cli serve ./docs/api/swagger.yaml",
     "docs:code": "typedoc",
-    "test": "jest",
+    "test": "node --expose-gc node_modules/jest/bin/jest",
     "test:coverage": "npm test -- --coverage",
     "test:ci": "npm run test:coverage -- ---ci -runInBand --verbose --logHeapUsage"
   },
