@@ -49,7 +49,7 @@
     "helmet": "5.0.2",
     "joi": "17.6.0",
     "lodash": "4.17.21",
-    "mongoose": "6.2.10",
+    "mongoose": "6.3.0",
     "morgan": "1.10.0",
     "qs": "6.10.3",
     "require-all": "3.0.0"
