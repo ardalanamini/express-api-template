@@ -60,7 +60,7 @@
     "@types/jest": "27.4.1",
     "@types/lodash": "4.14.181",
     "@types/morgan": "1.9.3",
-    "@types/node": "17.0.23",
+    "@types/node": "17.0.25",
     "@types/require-all": "3.0.3",
     "@types/supertest": "2.0.12",
     "@typescript-eslint/eslint-plugin": "5.19.0",
