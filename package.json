@@ -41,7 +41,7 @@
     "test:ci": "npm run test:coverage -- ---ci -runInBand --verbose --logHeapUsage"
   },
   "dependencies": {
-    "@sentry/node": "6.19.6",
+    "@sentry/node": "6.19.7",
     "@sentry/tracing": "6.19.7",
     "cors": "2.8.5",
     "dotenv": "16.0.0",
