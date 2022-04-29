@@ -71,7 +71,7 @@
     "jest": "27.5.1",
     "mongodb-memory-server": "8.5.1",
     "nodemon": "2.0.15",
-    "redoc-cli": "0.13.10",
+    "redoc-cli": "0.13.11",
     "supertest": "6.2.3",
     "swagger-jsdoc": "6.2.1",
     "ts-jest": "27.1.4",
